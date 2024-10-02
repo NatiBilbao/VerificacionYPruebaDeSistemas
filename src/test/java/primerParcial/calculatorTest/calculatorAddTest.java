@@ -1,8 +1,8 @@
-package calculatorTest;
+package primerParcial.calculatorTest;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import unitTest.Calculator;
+import primerParcial.unitTest.Calculator;
 
 public class calculatorAddTest {
     @Test
