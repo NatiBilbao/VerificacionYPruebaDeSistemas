@@ -2,6 +2,7 @@ package primerParcial.calcServiceMock;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import primerParcial.unitTest.CalcService;
 import primerParcial.unitTest.CalculatorAWS;
 
@@ -20,7 +21,7 @@ public class CalculatorAWSTestMock {
         calculatorAWS.setCalcService(calcService);
         Assertions.assertEquals(6,calculatorAWS.getFact(3),"ERROR el factorial esta mal");
         //Paso 5
-        Mokito.verify(calcService).mul(1,1);
+        Mockito.verify(calcService).mul(1,1);
         Mockito.verify(calcService).mul(1,2);
         Mockito.verify(calcService).mul(2,3);
     }
