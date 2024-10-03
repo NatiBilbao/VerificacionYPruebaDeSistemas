@@ -1,10 +1,5 @@
 package primerParcial.ejerciciosEnClase;
 
-import primerParcial.ejerciciosEnClase.AfpService;
-import primerParcial.ejerciciosEnClase.AsfiService;
-import primerParcial.ejerciciosEnClase.SegipService;
-import primerParcial.unitTest.CalcService;
-import primerParcial.unitTest.CalculatorAWS;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
