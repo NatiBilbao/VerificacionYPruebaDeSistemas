@@ -13,7 +13,7 @@ public class ProjectTest {
     @DisplayName("Verify Create Read Update Delete Project - Todo.ly")
     public void verifyCRUDProject(){
         JSONObject body = new JSONObject();
-        body.put("Content","RESTJsonBody");
+        body.put("Content","RESTJsonBodyN");
         body.put("Icon",7);
 
         // create
@@ -47,7 +47,7 @@ public class ProjectTest {
                 .body("Icon",equalTo(7))
                 .log().all();
         // update
-        body.put("Content","RESTUPDATE");
+        body.put("Content","NATALIARESTUPDATE");
         body.put("Icon",10);
         response = given()
                 .auth()
@@ -60,7 +60,7 @@ public class ProjectTest {
 
         response.then()
                 .statusCode(200)
-                .body("Content",equalTo("RESTUPDATE"))
+                .body("Content",equalTo("NATALIARESTUPDATE"))
                 .body("Icon",equalTo(10))
                 .log().all();
         // delete
@@ -74,7 +74,7 @@ public class ProjectTest {
                 .delete("https://todo.ly/api/projects/"+id+".json");
         response.then()
                 .statusCode(200)
-                .body("Content",equalTo("RESTUPDATE"))
+                .body("Content",equalTo("NATALIARESTUPDATE"))
                 .body("Icon",equalTo(10))
                 .body("Deleted",equalTo(true))
                 .log().all();

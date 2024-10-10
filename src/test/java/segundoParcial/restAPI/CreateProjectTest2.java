@@ -13,7 +13,7 @@ public class CreateProjectTest2 {
     @DisplayName("Verify Create Project by API - Todo.ly JSONObject")
     public void verifyCreateProjectJSONObject(){
         JSONObject body = new JSONObject();
-        body.put("Content","RESTJsonBody");
+        body.put("Content","RESTJsonBodyN");
         body.put("Icon",7);
 
         given()
@@ -36,7 +36,7 @@ public class CreateProjectTest2 {
     @DisplayName("Verify Create Project by API - Todo.ly Extract Element")
     public void verifyCreateProjectExtractElement(){
         JSONObject body = new JSONObject();
-        body.put("Content","RESTJsonBody");
+        body.put("Content","RESTJsonBodyN");
         body.put("Icon",7);
 
         Response response = given()

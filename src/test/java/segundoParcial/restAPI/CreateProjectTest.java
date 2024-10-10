@@ -32,13 +32,13 @@ public class CreateProjectTest {
                 .preemptive()
                 .basic("api2024@2024.com","12345")
                 .body("{\n" +
-                        "   \"Content\":\"EynarRESTASSURED\",\n" +
+                        "   \"Content\":\"NataliaRESTASSURED\",\n" +
                         "   \"Icon\":6\n" +
                         "}")
                 .log().all()
-                .when()
+        .when()
                 .post("https://todo.ly/api/projects.json")
-                .then()
+        .then()
                 .log().all();
     }
 
@@ -46,8 +46,8 @@ public class CreateProjectTest {
     @DisplayName("Verify Create Project by API - Todo.ly JSONObject")
     public void verifyCreateProjectJSONObject(){
         JSONObject body = new JSONObject();
-        body.put("Content","RESTJsonBody");
-        body.put("Icon",7);
+        body.put("Content","RESTJsonBodyN");
+        body.put("Icon",3);
 
         given()
                 .auth()
@@ -55,9 +55,9 @@ public class CreateProjectTest {
                 .basic("api2024@2024.com","12345")
                 .body(body.toString())
                 .log().all()
-                .when()
+        .when()
                 .post("https://todo.ly/api/projects.json")
-                .then()
+        .then()
                 .log().all();
     }
 
@@ -68,8 +68,8 @@ public class CreateProjectTest {
         String fileBodyPath =new File("").getAbsolutePath()+"/src/test/resources/createProjectBody.json";
 
         JSONObject body = new JSONObject();
-        body.put("Content","RESTJsonBody");
-        body.put("Icon",7);
+        body.put("Content","RESTJsonBodyN");
+        body.put("Icon",3);
 
         given()
                 .auth()
@@ -77,9 +77,9 @@ public class CreateProjectTest {
                 .basic("api2024@2024.com","12345")
                 .body(new File(fileBodyPath))
                 .log().all()
-                .when()
+        .when()
                 .post("https://todo.ly/api/projects.json")
-                .then()
+        .then()
                 .log().all();
     }
 }
