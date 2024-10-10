@@ -1,0 +1,11 @@
+Se tiene un metodo, que invierte digitos de un numero, y el dato de retorno
+es el digito invertido en String
+
+Ejemplo: Si ingreso 878, retorna "878"
+Ingreso 231, retorna "132"
+ingreso 100, retorna "001"
+ingreso 2, retorna "2"
+
+invertir(int number);
+
+- Crear unit test
